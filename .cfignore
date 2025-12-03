@@ -1,19 +1,26 @@
-# Ignore Webpack cache (bắt buộc)
-.next/cache/**
-.next/cache/*
-
-# Ignore node modules
-node_modules/**
-
-# Ignore Vercel config
-.vercel/**
-
 # Logs
 *.log
 
 # Git
+.git/
 .git/**
 
-# Optional
+# Vercel files
+.vercel/
+.vercel/**
+
+# Next.js build output
+.next/
+.next/**
+.next/cache/
+.next/cache/**
+
+# Build folders
+build/
 build/**
+dist/
 dist/**
+
+# Node modules (không cần cho Pages)
+node_modules/
+node_modules/**
