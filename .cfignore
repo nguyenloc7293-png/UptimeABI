@@ -1,26 +1,14 @@
-# Logs
-*.log
-
-# Git
-.git/
-.git/**
-
-# Vercel files
-.vercel/
-.vercel/**
-
-# Next.js build output
 .next/
 .next/**
 .next/cache/
 .next/cache/**
-
-# Build folders
+node_modules/
+node_modules/**
+.build/
 build/
 build/**
 dist/
 dist/**
-
-# Node modules (không cần cho Pages)
-node_modules/
-node_modules/**
+.git/
+.git/**
+*.log
