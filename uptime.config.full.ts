@@ -7,7 +7,7 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://github.com/lyc8503', label: 'GitHub' },
     { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'mailto:nguyenloc7293@gmail.com', label: 'Email Me', highlight: true },
   ],
   // [OPTIONAL] Group your monitors
   // If not specified, all monitors will be shown in a single list
