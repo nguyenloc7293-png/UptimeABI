@@ -44,9 +44,9 @@ const workerConfig: WorkerConfig = {
       // `name` is used at status page and callback message
       name: 'My API Monitor',
       // `method` should be a valid HTTP Method
-      method: 'POST',
+      method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
+      target: 'https://www.google.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
       tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
