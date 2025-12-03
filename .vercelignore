@@ -1,0 +1,12 @@
+.next/
+.next/**
+node_modules/
+node_modules/**
+
+.next/cache
+.next/cache/**
+.next/server
+node_modules
+*.log
+dist
+build
