@@ -1,5 +1,19 @@
-.next/cache
+# Ignore Webpack cache (bắt buộc)
+.next/cache/**
+.next/cache/*
+
+# Ignore node modules
+node_modules/**
+
+# Ignore Vercel config
+.vercel/**
+
+# Logs
 *.log
-node_modules
-.vercel
-.git
+
+# Git
+.git/**
+
+# Optional
+build/**
+dist/**
