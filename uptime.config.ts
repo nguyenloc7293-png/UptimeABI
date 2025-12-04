@@ -137,7 +137,7 @@ const workerConfig: WorkerConfig = {
 const maintenances: MaintenanceConfig[] = [
   {
     // [Optional] Monitor IDs to be affected by this maintenance
-    //monitors: ['foo_monitor', 'bar_monitor'],
+    monitors: ['foo_monitor', 'bar_monitor'],
     // [Optional] default to "Scheduled Maintenance" if not specified
     title: 'Welcome to the Dashboard Monitor',
     // Description of the maintenance, will be shown at status page
