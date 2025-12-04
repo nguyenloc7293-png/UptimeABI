@@ -61,7 +61,6 @@ const pageConfig: PageConfig = {
             expectedCodes: [200],
             timeout: 10000,
           },
-      };
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
