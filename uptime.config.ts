@@ -141,7 +141,7 @@ const maintenances: MaintenanceConfig[] = [
     // [Optional] default to "Scheduled Maintenance" if not specified
     title: 'Welcome to the Dashboard Monitor',
     // Description of the maintenance, will be shown at status page
-    //body: 'This is a test maintenance, server software upgrade',
+    body: 'This is a test maintenance, server software upgrade',
     // Start time of the maintenance, in UNIX timestamp or ISO 8601 format
     //start: '2020-01-01T00:00:00+08:00',
     // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
