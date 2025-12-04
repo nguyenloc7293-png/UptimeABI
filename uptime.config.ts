@@ -24,7 +24,7 @@ const workerConfig: WorkerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'foo_monitor',
       // `name` is used at status page and callback message
-      name: 'ABI Monitor',
+      name: 'Maps Monitor',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
@@ -42,6 +42,38 @@ const workerConfig: WorkerConfig = {
         'User-Agent': 'Uptimeflare',
         Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
+       {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'foo_monitor',
+      // `name` is used at status page and callback message
+      name: 'ABI VPN Monitor',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://vpn.vn.ab-inbev.com',
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      tooltip: 'This is a VPN ABI',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://vpn.vn.ab-inbev.com',
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+      // [OPTIONAL] headers to be sent
+      headers: {
+        'User-Agent': 'Uptimeflare',
+        Authorization: 'Bearer YOUR_TOKEN_HERE',
+      },
+      {
+       id: 'google_doh',
+       name: 'Google DNS-over-HTTPS',
+       method: 'GET',
+       target: 'https://dns.google/dns-query',
+       tooltip: 'This is a DNS Google',
+       statusPageLink: 'https://google.com',
+       expectedCodes: [200],
+       timeout: 10000,
+      }
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
@@ -62,7 +94,7 @@ const workerConfig: WorkerConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '180.148.7.129',
+      target: '180.148.7.129:80',
       tooltip: 'My production server SSH',
       statusPageLink: 'https://maps.vn.ab-inbev.com',
       timeout: 5000,
@@ -84,7 +116,7 @@ const workerConfig: WorkerConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '1.1.1.1:53',
+      target: '1.1.1.1:853',
       tooltip: 'DNS CLoudFlare',
       statusPageLink: 'https://one.one.one.one/',
       timeout: 5000,
