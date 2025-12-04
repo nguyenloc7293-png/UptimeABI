@@ -58,13 +58,35 @@ const workerConfig: WorkerConfig = {
     // Example TCP Monitor
     {
       id: 'test_tcp_monitor',
-      name: 'Ping Monitor',
+      name: 'Maps Monitor',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
       target: '180.148.7.129',
       tooltip: 'My production server SSH',
       statusPageLink: 'https://maps.vn.ab-inbev.com',
+      timeout: 5000,
+    },
+    {
+      id: 'test_tcp_monitor',
+      name: '8.8.8.8 DNS',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '8.8.8.8',
+      tooltip: 'DNS Google,
+      statusPageLink: 'https://google.com',
+      timeout: 5000,
+    },
+    {
+      id: 'test_tcp_monitor',
+      name: '1.1.1.1 DNS',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '1.1.1.1',
+      tooltip: 'DNS CLoudFlare',
+      statusPageLink: 'https://one.one.one.one/',
       timeout: 5000,
     },
   ],
@@ -115,16 +137,16 @@ const workerConfig: WorkerConfig = {
 const maintenances: MaintenanceConfig[] = [
   {
     // [Optional] Monitor IDs to be affected by this maintenance
-    monitors: ['foo_monitor', 'bar_monitor'],
+    //monitors: ['foo_monitor', 'bar_monitor'],
     // [Optional] default to "Scheduled Maintenance" if not specified
-    title: 'Test Maintenance',
+    title: 'Welcome to the Dashboard Monitor',
     // Description of the maintenance, will be shown at status page
-    body: 'This is a test maintenance, server software upgrade',
+    //body: 'This is a test maintenance, server software upgrade',
     // Start time of the maintenance, in UNIX timestamp or ISO 8601 format
-    start: '2020-01-01T00:00:00+08:00',
+    //start: '2020-01-01T00:00:00+08:00',
     // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
     // if not specified, the maintenance will be considered as on-going
-    end: '2050-01-01T00:00:00+08:00',
+    //end: '2050-01-01T00:00:00+08:00',
     // [Optional] color of the maintenance alert at status page, default to "yellow"
     color: 'blue',
   },
