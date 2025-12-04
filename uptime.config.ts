@@ -16,64 +16,53 @@ const pageConfig: PageConfig = {
   ],
 }
 
-const workerConfig: WorkerConfig = {
-  // Define all your monitors here
-  monitors: [
-    // Example HTTP Monitor
-    {
-      // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
-      // `name` is used at status page and callback message
-      name: 'Maps Monitor',
-      // `method` should be a valid HTTP Method
-      method: 'GET',
-      // `target` is a valid URL
-      target: 'https://maps.vn.ab-inbev.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://maps.vn.ab-inbev.com',
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 10000,
-      // [OPTIONAL] headers to be sent
-      headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
-       {
-      // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
-      // `name` is used at status page and callback message
-      name: 'ABI VPN Monitor',
-      // `method` should be a valid HTTP Method
-      method: 'GET',
-      // `target` is a valid URL
-      target: 'https://vpn.vn.ab-inbev.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a VPN ABI',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://vpn.vn.ab-inbev.com',
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 10000,
-      // [OPTIONAL] headers to be sent
-      headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
-      {
-       id: 'google_doh',
-       name: 'Google DNS-over-HTTPS',
-       method: 'GET',
-       target: 'https://dns.google/dns-query',
-       tooltip: 'This is a DNS Google',
-       statusPageLink: 'https://google.com',
-       expectedCodes: [200],
-       timeout: 10000,
-      },
+  const workerConfig: WorkerConfig = {
+        monitors: [
+          // --- Monitor 1: MAPS ---
+          {
+            id: 'maps_monitor',
+            name: 'Maps Monitor',
+            method: 'GET',
+            target: 'https://maps.vn.ab-inbev.com',
+            tooltip: 'This is a tooltip for MAPS',
+            statusPageLink: 'https://maps.vn.ab-inbev.com',
+            expectedCodes: [200],
+            timeout: 10000,
+            headers: {
+              'User-Agent': 'Uptimeflare',
+              Authorization: 'Bearer YOUR_TOKEN_HERE',
+            },
+          },
+      
+          // --- Monitor 2: VPN ---
+          {
+            id: 'abi_vpn_monitor',
+            name: 'ABI VPN Monitor',
+            method: 'GET',
+            target: 'https://vpn.vn.ab-inbev.com',
+            tooltip: 'This is a VPN ABI',
+            statusPageLink: 'https://vpn.vn.ab-inbev.com',
+            expectedCodes: [200],
+            timeout: 10000,
+            headers: {
+              'User-Agent': 'Uptimeflare',
+              Authorization: 'Bearer YOUR_TOKEN_HERE',
+            },
+          },
+      
+          // --- Monitor 3: Google DNS over HTTPS ---
+          {
+            id: 'google_doh',
+            name: 'Google DNS-over-HTTPS',
+            method: 'GET',
+            target: 'https://dns.google/dns-query',
+            tooltip: 'This is a DNS Google',
+            statusPageLink: 'https://google.com',
+            expectedCodes: [200],
+            timeout: 10000,
+          },
+        ],
+      };
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
