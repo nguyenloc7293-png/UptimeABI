@@ -74,7 +74,7 @@ const workerConfig: WorkerConfig = {
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
       target: '8.8.8.8',
-      tooltip: 'DNS Google,
+      tooltip: 'DNS Google',
       statusPageLink: 'https://google.com',
       timeout: 5000,
     },
