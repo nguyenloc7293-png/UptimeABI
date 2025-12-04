@@ -10,7 +10,7 @@ const pageConfig: PageConfig = {
   title: "Firit Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://maps.vn.ab-inbev.com/', label: 'Maps' },
+    { link: 'https://www.facebook.com/hiraku45', label: 'Facebook' },
     { link: 'https://github.com/nguyenloc7293-png', label: 'Blog' },
     { link: 'mailto:vanloc.nguyen@vn.ab-inbev.com', label: 'Email Me', highlight: true },
   ],
