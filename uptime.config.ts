@@ -80,7 +80,7 @@ const pageConfig: PageConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '180.148.7.129:443',
+      target: '45.60.36.211:443',
       tooltip: 'My production server SSH',
       statusPageLink: 'https://maps.vn.ab-inbev.com',
       timeout: 5000,
@@ -102,7 +102,7 @@ const pageConfig: PageConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '1.1.1.1:853',
+      target: '1.1.1.1:53',
       tooltip: 'DNS CLoudFlare',
       statusPageLink: 'https://one.one.one.one/',
       timeout: 5000,
