@@ -2,10 +2,10 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "Firit Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
+    { link: 'https://maps.vn.ab-inbev.com/', label: 'Maps' },
     { link: 'https://blog.lyc8503.net/', label: 'Blog' },
     { link: 'https://translate.google.com/?hl=vi&tab=TT&sl=en&tl=vi&op=translate', label: 'Blog' },
     { link: 'mailto:nguyenloc7293@gmail.com', label: 'Email Me', highlight: true },
@@ -43,7 +43,7 @@ const workerConfig: WorkerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'foo_monitor',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'My HTTPS Monitor',
       // `method` should be a valid HTTP Method
       method: 'POST',
       // `target` is a valid URL
@@ -79,13 +79,13 @@ const workerConfig: WorkerConfig = {
     // Example TCP Monitor
     {
       id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
+      name: 'Ping Monitor',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
       target: '180.148.7.129',
       tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://maps.vn.ab-inbev.com/',
       timeout: 5000,
     },
   ],
