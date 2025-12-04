@@ -61,7 +61,6 @@ const pageConfig: PageConfig = {
             expectedCodes: [200],
             timeout: 10000,
           },
-        ],
       };
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
@@ -75,8 +74,9 @@ const pageConfig: PageConfig = {
       // checkProxy: 'worker://weur',
       // [OPTIONAL] if true, the check will fallback to local if the specified proxy is down
       // checkProxyFallback: true,
+    },
     // Example TCP Monitor
-    {
+   {
       id: 'test_tcp_monitor',
       name: 'Maps Monitor',
       // `method` should be `TCP_PING` for tcp monitors
@@ -88,7 +88,7 @@ const pageConfig: PageConfig = {
       timeout: 5000,
     },
     {
-      id: 'test_tcp_monitor',
+      id: 'test_gg_monitor',
       name: '8.8.8.8 DNS',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
@@ -99,7 +99,7 @@ const pageConfig: PageConfig = {
       timeout: 5000,
     },
     {
-      id: 'test_tcp_monitor',
+      id: 'test_dns_monitor',
       name: '1.1.1.1 DNS',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
