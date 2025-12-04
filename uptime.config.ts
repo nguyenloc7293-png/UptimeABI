@@ -80,7 +80,7 @@ const pageConfig: PageConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '180.148.7.129:80',
+      target: '180.148.7.129:443',
       tooltip: 'My production server SSH',
       statusPageLink: 'https://maps.vn.ab-inbev.com',
       timeout: 5000,
