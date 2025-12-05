@@ -44,10 +44,6 @@ const pageConfig: PageConfig = {
             statusPageLink: 'https://vpn.vn.ab-inbev.com',
             expectedCodes: [200],
             timeout: 10000,
-            headers: {
-              'User-Agent': 'Uptimeflare',
-              Authorization: 'Bearer YOUR_TOKEN_HERE',
-            },
           },
       
           // --- Monitor 3: Google DNS over HTTPS ---
@@ -59,8 +55,17 @@ const pageConfig: PageConfig = {
             tooltip: 'This is a DNS Google',
             statusPageLink: 'https://google.com',
             expectedCodes: [200],
-            timeout: 10000,
+            timeout: 5000,
           },
+          {
+            id: 'dns_cf',
+            name: 'Cloudflare DNS via HTTPS',
+            method: 'GET',
+            target: 'https://cloudflare-dns.com/dns-query?name=cloudflare.com&type=AAAA',
+            tooltip: 'HTTPS DNS check',
+            statusPageLink: 'https://one.one.one.one/',
+            timeout: 5000,
+           }, 
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
