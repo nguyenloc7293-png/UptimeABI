@@ -51,8 +51,8 @@ const pageConfig: PageConfig = {
             id: 'google_doh',
             name: 'Google DNS-over-HTTPS',
             method: 'GET',
-            target: 'https://dns.google/dns-query',
-            tooltip: 'This is a DNS Google',
+            target: 'https://dns.google/dns-query?name=google.com&type=A',
+            tooltip: 'Google DoH Check',
             statusPageLink: 'https://google.com',
             expectedCodes: [200],
             timeout: 5000,
@@ -61,11 +61,15 @@ const pageConfig: PageConfig = {
             id: 'dns_cf',
             name: 'Cloudflare DNS via HTTPS',
             method: 'GET',
-            target: 'https://cloudflare-dns.com/dns-query?name=cloudflare.com&type=AAAA',
+            target: 'https://cloudflare-dns.com/dns-query?name=cloudflare.com&type=A',
             tooltip: 'HTTPS DNS check',
             statusPageLink: 'https://one.one.one.one/',
+            expectedCodes: [200],
             timeout: 5000,
-           }, 
+            headers: {
+              'accept': 'application/dns-json'
+            }
+          },
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
